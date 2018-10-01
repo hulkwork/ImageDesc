@@ -13,6 +13,9 @@ You could have some information about an image
 * auto-encoder to create new <a href="https://www.youtube.com/watch?v=3-UDwk1U77s">image</a> 
  
 ## Usage
+```bash
+python main.py --path <path-to-your-image>
+```
 ## Requirement 
 ```bash
 pip install -r requirement.txt
