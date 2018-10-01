@@ -19,6 +19,7 @@ python main.py --path <path-to-your-image>
 ## Requirement 
 ```bash
 pip install -r requirement.txt
+sudo apt-get install python-opencv
 ```
 
 shape : https://www.pyimagesearch.com/2016/02/08/opencv-shape-detection/
