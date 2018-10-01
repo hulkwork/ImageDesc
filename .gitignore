@@ -102,3 +102,12 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+*dominant_colors*
+*kmeans*
+lbpcascade_animeface.xml
+*anime_face*
+*_shape*
+yolov*
+*_object*
+*_canny*
+*_laplacian*
