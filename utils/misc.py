@@ -45,3 +45,30 @@ def detect(c):
 
     # return the name of the shape
     return shape
+
+
+def dl_file(file_path, url):
+    if not os.path.isfile(file_path):
+        download_wget(url, os.path.dirname(file_path))
+
+    if not os.path.isfile(file_path):
+        raise IOError("please download %s from '%s' and put in %s" % (
+        os.path.basename(file_path), url, os.path.dirname(file_path)))
+
+
+def get_data():
+    cascade_file = os.path.join(dir_path, "../data/cascade/lbpcascade_animeface.xml")
+    url = 'https://raw.githubusercontent.com/nagadomi/lbpcascade_animeface/master/lbpcascade_animeface.xml'
+    dl_file(cascade_file,url)
+
+    yolov3_cfg = os.path.join(dir_path, "../data/yolo/yolov3.cfg")
+    url_yolov3_cfg = 'https://raw.githubusercontent.com/pjreddie/darknet/master/cfg/yolov3.cfg'
+    dl_file(yolov3_cfg, url_yolov3_cfg)
+
+    yolov3_txt = os.path.join(dir_path, "../data/yolo/yolov3.txt")
+    url_yolov3_txt = 'https://raw.githubusercontent.com/arunponnusamy/object-detection-opencv/master/yolov3.txt'
+    dl_file(yolov3_txt, url_yolov3_txt)
+
+    yolov3_weights = os.path.join(dir_path, "../data/yolo/yolov3.weights")
+    url_yolov3_weights = 'https://pjreddie.com/media/files/yolov3.weights'
+    dl_file(yolov3_weights, url_yolov3_weights)
